@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarkov is Dogpoo - The Truth Exposed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="animated-bg" aria-hidden="true">
+        <div class="layer l1" style="--cx:20% ; --cy:30%"></div>
+        <div class="layer l2" style="--cx:80% ; --cy:60%"></div>
+        <div class="layer l3" style="--cx:50% ; --cy:40%"></div>
+        <div class="scanlines" aria-hidden="true"></div>
+    </div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <img src="pictures/eft.jpg" alt="logo">
+          <div>
+            <h1>Escape from Tarkov — Technical Audit</h1>
+            <p class="small muted">Independent technical & design review</p>
+          </div>
+        </div>
+        <div style="display:flex; gap:8px; align-items:center;">
+          <button id="neon-toggle" class="button small neon" title="Toggle Neon mode" aria-pressed="false">💡</button>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="issues.html">Issues</a></li>
+            <li><a href="performance.html">Performance</a></li>
+            <li><a href="gameplay.html">Gameplay</a></li>
+            <li><a href="economy.html">Economy</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+      <section class="hero">
+        <div class="hero-left">
+          <h2>Independent technical & design audit</h2>
+          <p class="lead">A concise, prioritized review of core systems affecting player experience: networking, performance, gameplay and economy — including practical remediation guidance.</p>
+          <div class="cta-group">
+            <a class="btn" href="issues.html">Read full findings</a>
+            <a class="btn secondary" href="contact.html">Request consultancy</a>
+          </div>
+        </div>
+        <div class="hero-visual"><img src="pictures/eft.jpg" alt="Tarkov overview"></div>
+      </section>
+
+      <section class="section">
+        <h3>Executive summary</h3>
+        <div class="kv-list">
+          <div class="kv"><div class="k">Top risks</div><div class="v">Network desynchronization, exploit prevalence, inconsistent performance.</div></div>
+          <div class="kv"><div class="k">Primary impact</div><div class="v">Player retention, monetization stability, public perception.</div></div>
+          <div class="kv"><div class="k">Recommended next step</div><div class="v">Immediate server-side hardening and targeted performance fixes.</div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Explore the audit</h3>
+        <div class="grid">
+          <a class="card" href="issues.html"><h3>Findings</h3><p class="muted">Root-cause analysis and priority matrix.</p></a>
+          <a class="card" href="performance.html"><h3>Performance</h3><p class="muted">Profiling-based remediation plan.</p></a>
+          <a class="card" href="gameplay.html"><h3>Gameplay</h3><p class="muted">Design and progression recommendations.</p></a>
+          <a class="card" href="economy.html"><h3>Economy</h3><p class="muted">Market stability and monetization review.</p></a>
+          <a class="card" href="about.html"><h3>Methodology</h3><p class="muted">How we validated findings.</p></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tarkov Audit — Independent technical & design review.</p>
+        <p class="muted" style="margin-top:10px;">This site is a formatted community audit — not an official product page.</p>
+    </footer>
+
+    <div id="cool-meter" aria-hidden="true">
+        <div class="label">Coolness</div>
+        <div class="bar"><div class="fill" style="width:0%"></div></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

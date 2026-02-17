@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Issues — Tarkov Audit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="pictures/eft.jpg" alt="logo">
+        <div>
+          <h1>Core Issues — Technical Findings</h1>
+          <p class="small muted">Prioritized list of high-impact defects and regressions</p>
+        </div>
+      </div>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="issues.html">Issues</a></li>
+          <li><a href="performance.html">Performance</a></li>
+          <li><a href="gameplay.html">Gameplay</a></li>
+          <li><a href="economy.html">Economy</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h2>Executive summary</h2>
+      <p class="muted">The product exhibits several high-severity issues that materially degrade player experience: network synchronization, exploit prevalence, and inconsistent audio/visual feedback. Below are the findings, impact assessment and recommended remediation steps.</p>
+    </section>
+
+    <section class="section">
+      <h3>1. Network synchronization (Desync)</h3>
+      <p class="muted">Overview: Clients and server disagree about entity positions in non-trivial scenarios, resulting in 'phantom' hits or misses.</p>
+      <ul class="small muted">
+        <li><strong>Impact:</strong> High — causes player frustration, perceived unfairness.</li>
+        <li><strong>Recommendation:</strong> Add authoritative reconciliation logs, increase tick rate for critical interactions, and deploy server-side hit validation telemetry.</li>
+        <li><strong>Priority:</strong> P0 — Immediate investigation required.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h3>2. Anti-cheat & exploit mitigation</h3>
+      <p class="muted">Overview: Reports indicate persistent undetected cheats and account abuse.</p>
+      <ul class="small muted">
+        <li><strong>Impact:</strong> High — undermines competitive integrity and player retention.</li>
+        <li><strong>Recommendation:</strong> Harden server-side validation, implement heuristic detection pipelines, and accelerate ban enforcement with automated account flagging.</li>
+        <li><strong>Priority:</strong> P0 — short-term enforcement + medium-term architecture improvements.</li>
+      </ul>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h3>Audio & perception</h3>
+        <p class="muted">Inaccurate spatial audio and inconsistent cueing reduce tactical reliability. Improve audio occlusion, use higher-quality HRTF and validate vertical positioning of sources.</p>
+      </div>
+      <div class="card">
+        <h3>AI behavior</h3>
+        <p class="muted">NPCs occasionally ignore obvious threats or path through geometry. Increase QA coverage and add deterministic AI unit tests.</p>
+      </div>
+      <div class="card">
+        <h3>Bug regression cadence</h3>
+        <p class="muted">Frequent regressions introduced by releases. Adopt stronger CI, automated regression tests, and staged rollouts.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© 2026 Tarkov Audit · Findings and recommendations</footer>
+  <script src="script.js"></script>
+</body>
+</html>

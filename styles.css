@@ -1,0 +1,55 @@
+:root{
+  --bg: #0b1220;
+  --card: #0f1724;
+  --panel: rgba(255,255,255,0.02);
+  --text: #e6eef8;
+  --muted: #9aa6b2;
+  --accent: #00aaff;
+  --accent-2: #61d0ff;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family:Inter, Arial, Helvetica, sans-serif; background:linear-gradient(180deg,#071029 0%, #0b1220 100%); color:var(--text); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; line-height:1.6;
+}
+.container{max-width:1180px; margin:0 auto; padding:36px 20px}
+.site-header{background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-bottom:1px solid rgba(255,255,255,0.03); backdrop-filter:blur(6px);}
+.header-inner{display:flex; align-items:center; gap:18px; justify-content:space-between; padding:18px 24px}
+.brand{display:flex; gap:16px; align-items:center}
+.brand img{height:72px; border-radius:8px; box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+.brand h1{font-family:Orbitron, Inter, Arial; font-size:1.25rem; margin:0; color:var(--accent-2); letter-spacing:1px}
+.brand p{margin:0; color:var(--muted); font-size:0.86rem}
+.site-nav ul{list-style:none; display:flex; gap:12px; margin:0; padding:0; align-items:center}
+.site-nav a{color:var(--muted); text-decoration:none; padding:8px 12px; border-radius:8px; font-weight:600; font-size:0.95rem; transition:all .18s ease}
+.site-nav a:hover{background:rgba(255,255,255,0.01); color:var(--text); box-shadow:0 6px 24px rgba(2,6,23,0.6)}
+.site-nav a.active{background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#04101a; box-shadow:0 8px 40px rgba(20,180,255,0.08)}
+.hero{display:flex; gap:24px; align-items:center; padding:48px; border-radius:14px; background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00)); border:1px solid rgba(255,255,255,0.02); box-shadow:inset 0 1px 0 rgba(255,255,255,0.02)}
+.hero-left{flex:1}
+.hero h2{font-family:Orbitron, Inter; font-size:2rem; margin:0 0 8px; color:var(--accent-2)}
+.hero p.lead{margin:0 0 18px; color:var(--muted)}
+.cta-group{display:flex; gap:12px}
+.btn{display:inline-flex; align-items:center; gap:10px; background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#04101a; border:none; padding:10px 16px; border-radius:10px; font-weight:700; cursor:pointer; text-decoration:none}
+.btn.secondary{background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,0.03)}
+.hero-visual{width:320px; min-width:220px; border-radius:12px; overflow:hidden; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.03); box-shadow:0 10px 50px rgba(2,6,23,0.6)}
+.hero-visual img{display:block; width:100%; height:100%; object-fit:cover}
+.section{margin-top:28px; padding:24px; border-radius:12px; background:var(--card); border:1px solid rgba(255,255,255,0.02)}
+.kv-list{display:flex; gap:20px; flex-wrap:wrap}
+.kv{flex:1; min-width:180px; padding:12px; background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent); border-radius:10px}
+.kv .k{font-size:0.78rem; color:var(--muted)}
+.kv .v{font-weight:700; margin-top:6px}
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; margin-top:18px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00)); padding:18px; border-radius:10px; border:1px solid rgba(255,255,255,0.02); box-shadow:0 8px 40px rgba(2,6,23,0.6)}
+.card h3{margin:0 0 8px; color:var(--accent-2)}
+.card p{margin:0; color:var(--muted)}
+.footer{padding:28px 20px; margin-top:36px; text-align:center; color:var(--muted); font-size:0.9rem; border-top:1px solid rgba(255,255,255,0.02)}
+.table{width:100%; border-collapse:collapse}
+.table th, .table td{padding:8px 10px; text-align:left; border-bottom:1px solid rgba(255,255,255,0.02); color:var(--muted)}
+.form-row{display:flex; gap:12px}
+.input, textarea{width:100%; padding:10px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.03); background:transparent; color:var(--text)}
+textarea{min-height:140px}
+@media (max-width:900px){.hero{flex-direction:column; align-items:flex-start}.hero-visual{width:100%}.header-inner{flex-direction:column; gap:12px; align-items:flex-start}}
+/* subtle utility */
+.muted{color:var(--muted)}
+.small{font-size:.85rem}
+.badge{display:inline-block; padding:6px 10px; border-radius:999px; background:rgba(255,255,255,0.02); color:var(--muted); font-weight:700}

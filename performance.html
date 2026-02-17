@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Performance — Tarkov Audit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="pictures/eft.jpg" alt="logo">
+        <div>
+          <h1>Performance & Stability</h1>
+          <p class="small muted">Profiling-backed recommendations for latency and resource stability</p>
+        </div>
+      </div>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="issues.html">Issues</a></li>
+          <li><a href="performance.html">Performance</a></li>
+          <li><a href="gameplay.html">Gameplay</a></li>
+          <li><a href="economy.html">Economy</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h2>Summary</h2>
+      <p class="muted">Performance issues manifest as long load times, frame drops and memory growth over extended sessions. The following recommendations are prioritized for short and medium term.</p>
+    </section>
+
+    <section class="section">
+      <h3>Short-term fixes</h3>
+      <ul class="small muted">
+        <li>Precompile frequently used shaders during an offline build step.</li>
+        <li>Introduce per-map asset streaming limits and prioritize player-facing assets.</li>
+        <li>Add memory-use dashboard and leak detectors to the release build channel.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h3>Medium-term improvements</h3>
+      <ul class="small muted">
+        <li>Redesign loading pipeline to parallelize IO and scene preparation.</li>
+        <li>Implement progressive LOD and occlusion culling to reduce GPU load on dense maps.</li>
+        <li>Stagger and batch expensive background tasks (hideout/AI updates) to avoid spikes.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h3>Monitoring & telemetry</h3>
+      <p class="muted">Ship instrumentation for frame time, memory, and GPU telemetry; correlate with player reports to identify problematic builds and maps.</p>
+    </section>
+  </main>
+
+  <footer class="footer">© 2026 Tarkov Audit · Performance recommendations</footer>
+  <script src="script.js"></script>
+</body>
+</html>

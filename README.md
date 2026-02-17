@@ -26,3 +26,8 @@ Notes
 - This project is static (HTML/CSS/JS). No server-side code included.
 - The project is set as `private` in package.json to prevent accidental npm publish.
 - The GitHub Pages workflow will deploy the contents of `dist/` on push to `main`.
+
+
+
+
+This is just a test:)
